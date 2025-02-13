@@ -485,7 +485,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://api.web3forms.com/submit" method="POST" class = "contact-email" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -508,12 +508,16 @@
                   <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
 
+               
+                
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Loading...</div>
+                 
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
 
-                  <button type="submit">Send Message</button>
+                  <input type="hidden" name="access_key" value="835e1799-773f-4111-a201-0b151b6bc8b6">
+                  <button type="submit" class ="sub-btn">Send Message</button>
                 </div>
 
               </div>
