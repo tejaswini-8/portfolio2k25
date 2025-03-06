@@ -821,61 +821,83 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
-
 /*--------------------------------------------------------------
-# Services Section
+# project Section
 --------------------------------------------------------------*/
-.services .service-item {
-  position: relative;
+/* General Styles */
+
+/* Projects Section */
+.projects {
+  padding: 40px;
+  background: #fff;
 }
 
-.services .service-item .icon {
-  background: var(--accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  transition: 0.5s;
-  border: 1px solid var(--accent-color);
-  margin-right: 20px;
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.services .service-item .icon i {
-  color: var(--contrast-color);
-  font-size: 24px;
-  line-height: 0;
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.services .service-item:hover .icon {
-  background: var(--surface-color);
+/* Project Card */
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
+.project-card:hover {
+  transform: translateY(-35px);
+  box-shadow: 6px 6px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.services .service-item .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
 }
 
-.services .service-item .title a {
-  color: var(--heading-color);
+.project-card p {
+  color: #555;
+  font-size: 1rem;
 }
 
-.services .service-item .title a:hover {
-  color: var(--accent-color);
+.project-card a {
+  
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.services .service-item .description {
-  line-height: 24px;
-  font-size: 14px;
+.project-card a:hover {
+  color:#040b14 ;
+  text-decoration: underline;
 }
 
+/* Responsive */
+@media (max-width: 600px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
 
+.project-img{
+  width: 100%;
+  block-size: fit-content;
+} 
+
+.projects h5 {
+  color: #df1529;
+}
 
 /*--------------------------------------------------------------
 # Contact Section
